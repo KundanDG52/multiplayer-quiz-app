@@ -1,0 +1,86 @@
+# Multiplayer Quiz App
+
+## Overview
+
+The Multiplayer Quiz App is a React-based web application that allows two contestants to compete in a real-time quiz game. The game consists of 5 multiple-choice questions, each with a 15-second timer. A unique code is generated for the first contestant, which the second contestant can use to join the game. The winner is determined based on the number of correct answers.
+
+## Features
+
+- **Multiplayer Gameplay**: Two players can join a quiz session using a unique game code.
+- **Real-Time Synchronization**: Players answer questions simultaneously with a shared timer.
+- **Timed Questions**: Each question has a 15-second countdown.
+- **Answer Locking**: Once an answer is selected, it cannot be changed.
+- **Winner Declaration**: The player with the most correct answers wins, or a tie is declared.
+- **Responsive UI**: The app is optimized for desktops, tablets, and mobile devices.
+
+## Technologies Used
+
+- **React.js**: For building the frontend interface.
+- **Socket.IO**: For real-time communication between players.
+- **CSS**: For styling and responsiveness.
+- **Node.js & Express (Optional)**: If a backend is needed for game state management.
+- **OpenAI API (Optional)**: For generating quiz questions dynamically.
+
+## Installation and Setup
+
+### Prerequisites
+
+- Node.js installed (>= 16.x)
+- Git installed
+
+### Clone the Repository
+
+```sh
+git clone https://github.com/your-username/multiplayer-quiz-app.git
+cd multiplayer-quiz-app
+```
+
+### Install Dependencies
+
+```sh
+npm install
+```
+
+### Start the Development Server
+
+```sh
+npm start
+```
+
+The app will be available at `http://localhost:3000`.
+
+### Build for Production
+
+```sh
+npm run build
+```
+
+## Project Structure
+
+```
+multiplayer-quiz-app/
+├── public/
+├── src/
+│   ├── App.js       # Contains all logic code
+│   ├── App.css      # Contains normal responsive CSS
+│   ├── index.js     # React root file
+├── package.json
+├── README.md
+```
+
+## Technical Decisions
+
+- **All logic is implemented in `App.js`**: This includes game state, question handling, timer logic, and player interactions.
+- **CSS is handled in `App.css`**: Standard responsive styling without additional frameworks.
+- **Socket.IO**: Handles real-time communication between players.
+- **OpenAI API (Optional)**: Allows dynamic question generation.
+
+## Future Improvements
+
+- **Leaderboard Feature**: Store and display top scores.
+- **AI-Generated Questions**: Dynamically generate new quizzes.
+- **Authentication System**: Allow users to create accounts and track progress.
+
+## License
+
+This project is open-source under the MIT License.

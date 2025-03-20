@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Multiplayer Quiz App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The Multiplayer Quiz App is a React-based web application where two contestants compete in a quiz game consisting of 5 multiple-choice questions. Players take turns answering questions, each with a 15-second timer. The player with the most correct answers wins.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Two-Player Turn-Based Gameplay**: Player 1 answers all questions first, then Player 2.
+- **5 Multiple-Choice Questions**: Each question has four possible answers.
+- **15-Second Timer**: Players have a limited time to answer each question.
+- **Answer Locking**: Once an answer is selected, it cannot be changed.
+- **Winner Declaration**: The player with the most correct answers wins, or a tie is declared.
+- **Responsive UI**: Works on desktops, tablets, and mobile devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React.js**: For building the frontend interface.
+- **CSS**: For styling and responsiveness.
 
-### `npm test`
+## Installation and Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js installed (>= 16.x)
+- Git installed
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Clone the Repository
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```sh
+git clone https://github.com/KundanDG52/multiplayer-quiz-app.git
+cd multiplayer-quiz-app
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Install Dependencies
 
-### `npm run eject`
+```sh
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Start the Development Server
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The app will be available at `http://localhost:3000`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Build for Production
 
-## Learn More
+```sh
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+multiplayer-quiz-app/
+├── public/
+├── src/
+│   ├── App.js       # Contains all logic code
+│   ├── App.css      # Contains normal responsive CSS
+│   ├── index.js     # React root file
+├── package.json
+├── README.md
+```
 
-### Code Splitting
+## Technical Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Game Flow**:
+  - Player 1 answers all 5 questions first.
+  - Player 2 takes their turn after Player 1.
+  - At the end, scores are compared to determine the winner.
+- **Timer Implementation**:
+  - Each question has a 15-second timer.
+  - If time runs out, the game moves to the next question automatically.
+- **State Management**:
+  - React's `useState` and `useEffect` manage game state.
+- **Responsive Design**:
+  - CSS ensures proper layout across different screen sizes.
 
-### Analyzing the Bundle Size
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Leaderboard System**: Store and display top scores.
+- **Real-Time Multiplayer Mode**: Implement live multiplayer gameplay using WebSockets.
+- **Dynamic Questions**: Generate quiz questions dynamically from an API.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open-source under the MIT License.
